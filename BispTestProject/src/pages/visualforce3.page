@@ -1,0 +1,31 @@
+<apex:page standardController="Account" >
+    <apex:form >
+     <apex:pageBlock title="My Account">
+         <apex:pageBlockButtons >
+         <apex:commandButton action="{!save}" value="save"/>
+         </apex:pageBlockButtons>
+         <apex:pageBlockSection title="section1" columns="2" >
+         <apex:inputField value="{!account.name}"/>
+         <apex:inputField value="{!account.parentId}"/>
+         <apex:inputField value="{!account.industry}"/>
+         <apex:inputField value="{!account.phone}"/>
+         </apex:pageBlockSection>  
+         <apex:pageBlockSection title="section2" columns="2" >
+         <apex:inputField value="{!account.Rating}"/>
+         <apex:inputField value="{!account.Candidate__c}"/>
+         <apex:inputField value="{!account.Active__c}"/>
+         <apex:inputField value="{!account.phone}"/>
+          <apex:inputField value="{!account.BillingStreet}" />
+            <apex:inputField value="{!account.BillingCity}" />
+            <apex:inputField value="{!account.BillingState}" />
+            <apex:inputField value="{!account.BillingCountry}" />
+            <apex:inputField value="{!account.BillingPostalCode}" />
+             <apex:inputField value="{!account.ShippingStreet}" />
+             <apex:inputField value="{!account.ShippingCity}" />
+            <apex:inputField value="{!account.ShippingState}" />
+            <apex:inputField value="{!account.ShippingCountry}" />
+            <apex:inputField value="{!account.ShippingPostalCode}" />
+         </apex:pageBlockSection>                
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

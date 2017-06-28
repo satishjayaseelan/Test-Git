@@ -1,0 +1,19 @@
+<apex:page controller="Actionsupport1" id="Mypage" >
+    <apex:form >
+        <apex:selectList label="test" title="Accountname" value="{!selectedValue}" size="1" id="selectlist1">
+            <apex:selectOption itemLabel="--None--" itemValue="None"></apex:selectOption>
+            <apex:selectOption itemLabel="icici" itemValue="ICICI"></apex:selectOption>
+            <apex:selectOption itemLabel="apple" itemValue="Apple"></apex:selectOption>
+            <apex:actionSupport action="{!findcontact}" event="onchange"/>
+        </apex:selectList>
+        <br/>
+        <br/>
+         <apex:panelGroup >
+            <apex:outputPanel id="conPanel">
+                The value based on selection is: {!contacttoshow}
+            </apex:outputPanel>
+        </apex:panelGroup>
+
+    </apex:form>
+ 
+</apex:page>
