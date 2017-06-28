@@ -1,0 +1,15 @@
+<apex:page controller="orderFulfillmentController" >
+<p>Welcome page</p>
+<apex:pageBlock >
+
+<apex:form >
+<apex:pageBlockSection columns="2" >
+<apex:inputText value="{!Name}" label="Nam"/>
+<apex:inputText value="{!orderName}" label="Order"/>
+
+<p>Inside Page Block Section</p>
+
+</apex:pageBlockSection>
+</apex:form>
+</apex:pageBlock>
+</apex:page>

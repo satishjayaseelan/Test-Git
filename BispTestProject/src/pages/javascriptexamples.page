@@ -1,0 +1,19 @@
+<apex:page >  
+<apex:form >
+<apex:outputLabel >enter name :</apex:outputLabel>
+    <script >
+       fubction myjava()
+       {
+          alert('Hello');
+      }
+    </script>
+    <apex:outputLabel >Enter Email</apex:outputLabel>
+</apex:form>
+<script >
+       fubction myjava1()
+       {
+          alert('Hello');
+      }
+    </script>
+    
+</apex:page>

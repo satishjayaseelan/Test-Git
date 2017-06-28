@@ -1,0 +1,9 @@
+<apex:page standardController="contact" showHeader="true" showQuickActionVfHeader="false">
+<apex:form >
+    
+    <apex:detail subject="{!contact.accountId}" relatedList="false" title="false" inlineEdit="true"/>
+       <!--apex:outputText value="{!contact.account}" rendered="false" /-->
+             
+</apex:form>  
+      
+</apex:page>

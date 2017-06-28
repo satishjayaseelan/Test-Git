@@ -1,0 +1,51 @@
+<apex:page standardController="Account" extensions="AddressFieldController" >
+<apex:form >
+<apex:pageBlock title="Dispaly address">
+<apex:pageBlockSection columns="2">
+<apex:pageBlockSectionItem >
+ <apex:outputPanel >
+ <apex:outputText >*</apex:outputText>
+ <apex:outputLabel value="Account Name" for="account__name"/> 
+ </apex:outputPanel>                   
+ <apex:inputText value="{!record.Name}" id="account__name"/>    
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+ <apex:outputPanel >
+ <apex:outputText >*</apex:outputText>
+ <apex:outputLabel value="BillingCountry" /> 
+ </apex:outputPanel>                   
+ <apex:inputText value="{!record.BillingCountry}" />    
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+ <apex:outputPanel >
+ <apex:outputText >*</apex:outputText>
+ <apex:outputLabel value="BillingPostalCode"/> 
+ </apex:outputPanel>                   
+ <apex:inputText value="{!record.BillingPostalCode}" />    
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+ <apex:outputPanel >
+ <apex:outputText >*</apex:outputText>
+ <apex:outputLabel value="BillingState"/> 
+ </apex:outputPanel>                   
+ <apex:inputText value="{!record.BillingState}" />    
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+ <apex:outputPanel >
+ <apex:outputText >*</apex:outputText>
+ <apex:outputLabel value="BillingCity"/> 
+ </apex:outputPanel>                   
+ <apex:inputText value="{!record.BillingCity}" />    
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+ <apex:outputPanel >
+ <apex:outputText >*</apex:outputText>
+ <apex:outputLabel value="BillingStreet"/> 
+ </apex:outputPanel>                   
+ <apex:inputText value="{!record.BillingStreet}" />    
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

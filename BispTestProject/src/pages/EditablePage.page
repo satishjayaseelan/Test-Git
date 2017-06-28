@@ -1,0 +1,40 @@
+<apex:page standardController="Account" extensions="myControllerExtension">
+    <apex:form >
+        <apex:pageBlock title="My Content" mode="edit">
+            <apex:pageBlockSection title="My Content Section" columns="2">
+                <apex:pageBlockSectionItem >                    
+                        <apex:outputPanel >
+                        <apex:outputText >*</apex:outputText>
+                        <apex:outputLabel value="Account Name" for="account__name"/> 
+                        </apex:outputPanel>                   
+                        <apex:inputText value="{!account.name}" id="account__name"/>    
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >                    
+                        <apex:outputPanel >
+                        <apex:outputText >*</apex:outputText>
+                        <apex:outputLabel value="industry" for="account__name"/> 
+                        </apex:outputPanel>                   
+                        <apex:inputText value="{!account.industry}"/>    
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >                    
+                        <apex:outputPanel >
+                        <apex:outputText >*</apex:outputText>
+                        <apex:outputLabel value="fax" for="account__name1"/> 
+                        </apex:outputPanel>                   
+                        <apex:inputText value="{!account.fax}" id="account__name"/>    
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >                    
+                        <apex:outputPanel >
+                        <apex:outputText >*</apex:outputText>
+                        <apex:outputLabel value="Id" for="account__name"/> 
+                        </apex:outputPanel>
+                         <apex:inputField value="{!account.parentId}" />                    
+                        <!--apex:inputText value="{!account.Candidate__r.name}" id="account__name"/-->
+                        
+                  </apex:pageBlockSectionItem>
+                       
+                  
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
