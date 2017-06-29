@@ -1,0 +1,5 @@
+<apex:page standardController="account">
+<apex:pageBlock title="Account Detail">
+  
+  </apex:pageBlock>
+</apex:page>

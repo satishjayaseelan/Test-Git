@@ -1,0 +1,52 @@
+<apex:page tabStyle="Account" showChat="true" standardController="Account" extensions="accExtension">
+      <apex:sectionHeader title="Account Detail page" subtitle="{!account.Name}"/>
+      <apex:form >
+          <apex:pageBlock title="Account Detail">
+              <apex:pageBlockButtons >
+                  <apex:commandButton action="{!dosave}" value="Save"/>
+                   <apex:commandButton action="{!doedit}" value="Edit"/>
+              </apex:pageBlockButtons>
+              <apex:pageBlockSection collapsible="true" columns="2" title="Information">
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel >Account name</apex:outputLabel>
+                      <apex:inputText value="{!account.Name}"/>
+                  </apex:pageBlockSectionItem>
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel >Account number</apex:outputLabel>
+                      <apex:inputText value="{!account.accountnumber}"/>
+                  </apex:pageBlockSectionItem>
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel >Industry</apex:outputLabel>
+                      <apex:inputText value="{!account.industry}"/>
+                  </apex:pageBlockSectionItem>
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel >Rating</apex:outputLabel>
+                      <apex:selectList size="1">
+                      <apex:selectOption itemLabel="--None--" itemValue="None"></apex:selectOption>
+                          <apex:selectOption itemLabel="Good" itemValue="Good"></apex:selectOption>
+                          <apex:selectOption itemLabel="Poor" itemValue="Poor"></apex:selectOption>
+                          <apex:selectOption itemLabel="Very Poor" itemValue="Very Poor"></apex:selectOption>
+                      </apex:selectList>
+                  </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>
+              <apex:pageBlockSection collapsible="true" columns="2" title="Address">
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel >Street</apex:outputLabel>
+                      <apex:inputText value="{!account.Billingstreet}"/>
+                  </apex:pageBlockSectionItem>
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel >City</apex:outputLabel>
+                      <apex:inputText value="{!account.BillingCity}"/>
+                  </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>    
+          </apex:pageBlock>
+          <apex:pageBlock title="Contacts">          
+                    
+              <apex:pageBlockTable value="{!account.Contacts}" var="item" >
+                  <apex:column value="{!item.name}" headerValue="Name"/>
+                  <apex:column value="{!item.name}" headerValue="class"/>
+              </apex:pageBlockTable>
+          </apex:pageBlock>
+
+      </apex:form>    
+</apex:page>
