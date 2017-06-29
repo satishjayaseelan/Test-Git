@@ -1,0 +1,22 @@
+<apex:page controller="simplegetset">
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockSection >
+  <apex:outputlabel value="Enter your name here : "/>
+       <apex:inputtext value="{!userinput}">
+       <apex:outputlabel value="Enter your age"/>
+       <apex:inputText value="{!userage}"/>
+      
+           <apex:actionsupport event="onclick" rerender="display" />
+       </apex:inputtext>                   
+    <apex:outputpanel id="display">
+    
+        <apex:outputtext value="The name entered is :{!userinput}"/><br/>
+        <apex:outputtext value="The Age :{!userage}"/>
+    </apex:outputpanel>      
+   
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+                    
+  </apex:form>    
+</apex:page>
